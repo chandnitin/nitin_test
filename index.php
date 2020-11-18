@@ -89,7 +89,7 @@ $fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
 }
 // redirect the user to the profile page if it has "code" GET variable
 if (isset($_GET['code'])) {
-header('Location: facebook.php');
+header('Location: dashboard.php');
 }
 // getting basic info about user
 try {
@@ -102,10 +102,11 @@ $fbfullname = $profile->getProperty('name');   // To Get Facebook full name
 $fbemail = $profile->getProperty('email');    //  To Get Facebook email
 $fbpic = "<img src='".$picture['url']."' class='img-rounded'/>";
 # save the user nformation in session variable
-$_SESSION['fb_id'] = $fbid.'</br>';
-$_SESSION['fb_name'] = $fbfullname.'</br>';
-$_SESSION['fb_email'] = $fbemail.'</br>';
+$_SESSION['user_id'] = $fbid.'</br>';
+$_SESSION['name'] = $fbfullname.'</br>';
+$_SESSION['email'] = $fbemail.'</br>';
 $_SESSION['fb_pic'] = $fbpic.'</br>';
+
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
 // When Graph returns an error
 echo 'Graph returned an error: ' . $e->getMessage();
