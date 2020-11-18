@@ -58,10 +58,10 @@ $fbfullname = $profile->getProperty('name');   // To Get Facebook full name
 $fbemail = $profile->getProperty('email');    //  To Get Facebook email
 $fbpic = "<img src='".$picture['url']."' class='img-rounded'/>";
 # save the user nformation in session variable
-$_SESSION['user_id'] = $fbid.'</br>';
-$_SESSION['name'] = $fbfullname.'</br>';
-$_SESSION['email'] = $fbemail.'</br>';
-$_SESSION['fb_pic'] = $fbpic.'</br>';
+$_SESSION['user_id'] = $fbid;
+$_SESSION['name'] = $fbfullname;
+$_SESSION['email'] = $fbemail;
+$_SESSION['fb_pic'] = $fbpic;
 
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
 // When Graph returns an error
