@@ -78,7 +78,7 @@ exit;
 } else {
 // replace your website URL same as added in the developers.Facebook.com/apps e.g. if you used http instead of https and you used            
 $loginUrl = $helper->getLoginUrl('https://nitin-test.herokuapp.com/', $permissions);
-echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
+//echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 }
 
 ?>
@@ -115,7 +115,7 @@ echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
         
         <button type="submit" class="btn btn-primary">Login</button>
         
-        <a href="fbconfig.php" type="submit" class="btn facebook">Facebook</a>
+        <a href="<?php echo $loginUrl ?>" type="submit" class="btn facebook">Facebook</a>
 
     </form>
     </div>
