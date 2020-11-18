@@ -2,7 +2,7 @@
 
  include_once('constant.php');
  require_once 'vendor/autoload.php';
- include_once('config.php');
+ //include_once('config.php');
  session_start();
 
 $fb = new Facebook\Facebook([
@@ -62,8 +62,8 @@ $_SESSION['email'] = $fbemail;
 $_SESSION['fb_pic'] = $fbpic;
  $_SESSION['photo'] =$fbpic;
 
-   $insSql= "INSERT INTO users(name,email,photo) VALUES ('".$fbfullname."','".$fbemail."','".$fbpic."')";
-   $conn->query($insSql);
+   // $insSql= "INSERT INTO users(name,email,photo) VALUES ('".$fbfullname."','".$fbemail."','".$fbpic."')";
+   // $conn->query($insSql);
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
 // When Graph returns an error
 echo 'Graph returned an error: ' . $e->getMessage();
