@@ -112,10 +112,10 @@ $loginUrl = $helper->getLoginUrl('https://nitin-test.herokuapp.com/', $permissio
             <input type="password" class="form-control" id="password" placeholder="Password" name="password" >
 
         </div>
-        
+        <a href="registration.php">New Registration</a>
         <button type="submit" class="btn btn-primary">Login</button>
         
-        <a href="<?php echo $loginUrl ?>" type="submit" class="btn facebook">Facebook</a>
+        <a href="<?php echo $loginUrl ?>"  class="btn facebook">Facebook</a>
 
     </form>
     </div>

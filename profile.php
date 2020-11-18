@@ -2,7 +2,7 @@
 
 include_once('config.php');
 include_once('header.php');
-
+include_once('constant.php');
 $sql    = "SELECT * FROM users WHERE email = '".$_SESSION['email']."' " ;
 $result = $conn->query($sql);
 $data = array();
@@ -119,6 +119,8 @@ if ($result->num_rows > 0) {
 					</div>
 					
 					<button id="submit" type="submit" value="submit" class="btn btn-primary center">Update</button>
+
+					<button href="<?php echo BASE_URL?>/account.php?&id=<?php echo $data['id'] ?>" class="btn btn-danger center">Deactive</button>
 			
 				</form>
 

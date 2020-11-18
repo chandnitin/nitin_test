@@ -20,13 +20,16 @@
        $insSql= "INSERT INTO users(name,email,phone,country,state,city,pin_code,photo,password) VALUES ('".$name."','".$email."','".$phone."','".$country."','".$state."','".$city."','".$pincode."','".$photo."','".$hash."')";
         if ($conn->query($insSql) === TRUE) {
             echo"<script>alert('Registration Successfully..')</script>";
-            echo "<script>window.location.href = ".$BASE_URL."'login.php';</script>";
+            echo "<script>window.location.href = ".$BASE_URL."'index.php';</script>";
           } else {
             echo"<script>alert('Something went worng..!')</script>";
             echo "<script>window.location.href = ".$BASE_URL."'registration.php';</script>";
           }
     }else{
-        echo $uploadResult; 
+
+        echo"<script>alert('".$uploadResult."')</script>";
+            echo "<script>window.location.href = ".$BASE_URL."'registration.php';</script>";
+        
     }
 
 
