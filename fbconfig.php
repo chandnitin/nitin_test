@@ -70,5 +70,5 @@ else
     $facebook_login_url = '<div align="center"><a href="'.$facebook_login_url.'"><img src="php-login-with-facebook.gif" /></a></div>';
 }
 
-print_r(_SESSION);
+print_r($_SESSION);
    ?>
