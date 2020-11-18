@@ -63,7 +63,7 @@ $_SESSION['fb_pic'] = $fbpic;
  $_SESSION['photo'] =$fbpic;
 
    $insSql= "INSERT INTO users(name,email,photo) VALUES ('".$fbfullname."','".$fbemail."','".$fbpic."')";
-   $conn->query($insSql)
+   $conn->query($insSql);
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
 // When Graph returns an error
 echo 'Graph returned an error: ' . $e->getMessage();
