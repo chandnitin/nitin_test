@@ -1,5 +1,6 @@
 <?php
 include_once('config.php');
+include_once('constant.php');
 session_start();
 $email  = $_POST['email'];
 $passwd = $_POST['password']; 
@@ -12,12 +13,13 @@ if ($result->num_rows > 0) {
     $_SESSION['user_id']  = $row["id"];
     $_SESSION['email']    = $row["email"];
     $_SESSION['name']     = $row["name"];
+    
     echo"<script>alert('Login Successfully..')</script>";
-    echo "<script>window.location.href = 'http://localhost/nitin_test/dashboard.php';</script>";
+    echo "<script>window.location.href = ".$BASE_URL."'dashboard.php';</script>";
   }
 } else {
     echo"<script>alert('Authentication Failed try again..!')</script>";
-    echo "<script>window.location.href = 'http://localhost/nitin_test/index.php';</script>";
+    echo "<script>window.location.href =".$BASE_URL."'index.php';</script>";
 }
 
 
