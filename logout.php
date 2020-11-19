@@ -1,5 +1,6 @@
 <?php
 session_start();
- session_destroy();
- echo "<script>window.location.href = 'http://localhost/nitin_test/index.php';</script>";
+session_destroy();
+include_once('constant.php');
+echo "<script>window.location.href = ".$BASE_URL."'index.php';</script>";
 ?>
