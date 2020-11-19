@@ -59,9 +59,13 @@ $fbemail = $profile->getProperty('email');    //  To Get Facebook email
 $fbpic = "<img src='".$picture['url']."' class='img-rounded'/>";
 # save the user nformation in session variable
 $_SESSION['user_id'] = $fbid;
-$_SESSION['name'] = $fbfullname;
+$_SESSION['name']   = $fbfullname;
 $_SESSION['email'] = $fbemail;
 $_SESSION['fb_pic'] = $fbpic;
+ $_SESSION['photo'] =$fbpic;
+
+   $insSql= "INSERT INTO users(name,email,photo) VALUES ('".$fbfullname."','".$fbemail."','".$fbpic."')";
+   $conn->query($insSql);
 
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
 // When Graph returns an error
