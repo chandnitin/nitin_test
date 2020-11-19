@@ -66,7 +66,7 @@ if ($result->num_rows > 0) {
 <div class="container" style="margin-top:20px;">
 <div class="row">
 <div>   
-    <img src="<?php echo BASE_URL. '/'.STORAGE.'/'.$data['photo'] ?>"  width="200px" height="200px" style="border: 1px solid  #ccc;  border-radius:5px;"/><br/>
+    <img src="<?php echo BASE_URL. '/'.STORAGE.'/'.$_SESSION['photo'] ?>"  width="200px" height="200px" style="border: 1px solid  #ccc;  border-radius:5px;"/><br/>
     
 
 </div>

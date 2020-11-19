@@ -5,7 +5,7 @@ session_start();
 $email  = $_POST['email'];
 $passwd = $_POST['password']; 
 $hash   = md5($passwd);  
- $sql    = "SELECT id, email,name,is_deleted  FROM users WHERE email = '".$email."' AND password='".$hash."'";
+ $sql    = "SELECT id, email,name,is_deleted,photo  FROM users WHERE email = '".$email."' AND password='".$hash."'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
@@ -14,6 +14,8 @@ if ($result->num_rows > 0) {
       $_SESSION['user_id']  = $row["id"];
       $_SESSION['email']    = $row["email"];
       $_SESSION['name']     = $row["name"];
+      $_SESSION['photo']     = $row["photo"];
+
       echo"<script>alert('Login Successfully..')</script>";
       echo "<script>window.location.href = ".$BASE_URL."'dashboard.php';</script>";
     }else{
