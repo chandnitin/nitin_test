@@ -64,7 +64,7 @@ $_SESSION['email'] = $fbemail;
 $_SESSION['fb_pic'] = $fbpic;
  $_SESSION['photo'] =$fbpic;
 
-   $insSql= "INSERT INTO users(name,email,photo) VALUES ('".$fbfullname."','".$fbemail."','".$fbpic."')";
+ echo  $insSql= "INSERT INTO users(name,email,photo) VALUES ('".$fbfullname."','".$fbemail."','".$fbpic."')"; die;
    $conn->query($insSql);
 
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
