@@ -72,7 +72,7 @@ if ($result->num_rows > 0) {
 <div class="row">
 <div>   
 	<?php if(!isset($data['fb'])){ ?>
-    <img src="<?php echo BASE_URL. '/'.STORAGE.'/'.$_SESSION['photo'] ?>"  width="200px" height="200px" style="border: 1px solid  #ccc;  border-radius:5px;"/><br/>
+    <img src="<?php echo BASE_URL. '/'.STORAGE.''.$_SESSION['photo'] ?>"  width="200px" height="200px" style="border: 1px solid  #ccc;  border-radius:5px;"/><br/>
     <?php } else{
 
     	echo $data['fb'];
