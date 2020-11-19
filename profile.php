@@ -9,8 +9,13 @@ $data = array();
 if ($result->num_rows > 0) { 
   $data = $result->fetch_assoc();
   
+}else{
+   $insSql= "INSERT INTO users(name,email,photo) VALUES ('".$_SESSION['name'] ."','".$_SESSION['email']."','".$_SESSION['photo'] ."')";
+   $conn->query($insSql);
+   $data['name']=$_SESSION['name'] ;
+   $data['email']=$_SESSION['email'];
+   $data['photo']=$_SESSION['photo'];
 }
-
 
 ?>
 
